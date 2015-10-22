@@ -1,0 +1,21 @@
+{
+  "name": "onedown",
+  "version": "0.1.0",
+  "description": "一键下载",
+  "main": "manifest.js",
+  "scripts": {
+    "watch": "./bin/watch-json manifest.js manifest.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meowtec/onedown.git"
+  },
+  "author": "Meowtec <bertonzh@gmail.com, http://cateyes.blue>",
+  "bugs": {
+    "url": "https://github.com/meowtec/onedown/issues"
+  },
+  "homepage": "https://github.com/meowtec/onedown#readme",
+  "devDependencies": {
+    "colors": "^1.1.2"
+  }
+}

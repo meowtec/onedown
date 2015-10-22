@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var fs = require('fs')
+var child_process = require('child_process')
+var process = require('process')
+var path = require('path')
+var spawn = require('child_process').spawn
+
+require('colors')
+
+var argv = process.argv
+var input = argv[2]
+var output = argv[3]
+
+function js2json() {
+  console.log(input + ' changed')
+  var node = spawn('node', [
+    '-e',
+    'console.log(JSON.stringify(require("' + path.resolve(input) + '"), null, "  "))',
+  ])
+
+  node.stdout.on('data', function(data) {
+    fs.writeFile(output, data)
+  })
+
+  node.stderr.on('data', function(data) {
+    process.stderr.write(data)
+  })
+
+  node.on('close', function (code) {
+    if (code === 0) {
+      console.log(`${input} -> ${output}`.green)
+    }
+  });
+}
+
+js2json()
+fs.watchFile(input, js2json)

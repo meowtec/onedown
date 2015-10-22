@@ -1,0 +1,14 @@
+.one-download {
+  position: relative;
+}
+.one-download a {
+  position: absolute;
+  text-indent: -200px;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLBAMAAADKYGfZAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURUxpcf///////////////////////////95C5tQAAAAHdFJOUwDDC4AGt7+sRuu4AAAA0klEQVRIx+3UPRKDIBCG4R3iCWhstUmdztYiV8gFcgMnxXf9IMvfgCzUDjuDBbw+lUiUDwDqmJGNbGQju1u2F9l0UT10ka2vMtuOJcvU/CsxQGfZChTcBjjOZ2oGcm4ye47zmcFw7FlnN5ckU/HFZOKuy+J71xxn11iyz1kFiwc2q2HxxGZVLBydWR0L3JkJmOfMQ8I8Z5aIOc4sEXMcj4Axx6OlDz1wIhY5LV8rxzUwz+nWLbVcE2NOty+94Towoie+Pf8Q9enBiN40pnNQn9tkfxvn4OzXTQH3AAAAAElFTkSuQmCC') #000 center no-repeat;
+  background-size: 14px 14px;
+  opacity: 0.6;
+}
